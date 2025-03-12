@@ -18,6 +18,9 @@ dbConnect();
 app.use('/api/tours', tourRoutes);
 app.use('/api/campaigns', campaignRoutes);
 
+app.get('/', (req,res)=>{
+  res.status(200).json({ status: 'ok' });
+})
 
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
